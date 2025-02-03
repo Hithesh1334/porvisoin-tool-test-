@@ -32,7 +32,7 @@ jobs:
       - name: Toolkit Authorization
         run: |
           cd toolkit-cli
-          ./toolkit-cli-0.60.0/ auth login --token ${{ secrets.TOOLKIT_AUTH_TOKEN }}
+          ./toolkit-cli-0.60.0 auth login --token ${{ secrets.TOOLKIT_AUTH_TOKEN }}
 
       - name: Run Toolkit Provision
         run: |
