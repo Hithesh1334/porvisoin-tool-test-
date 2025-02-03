@@ -31,8 +31,8 @@ jobs:
       - name: Toolkit Authorization
         run: |
           export TOOLKIT_AUTH_TOKEN="${{ secrets.TOOLKIT_AUTH_TOKEN }}"
-          ./toolkit init
-          ./toolkit auth
+          toolkit init
+          toolkit auth
 
       - name: Run Toolkit Provision
         run: |
