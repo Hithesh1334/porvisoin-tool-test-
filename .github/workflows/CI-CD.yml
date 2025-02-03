@@ -18,7 +18,7 @@ jobs:
         env:
           SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
         run: |
-          sed -i "s/\${SNOWFLAKE_USER}/$SNOWFLAKE_USER/g" toolkit.conf
+          sed -i "s/\${password}/$SNOWFLAKE_PASSWORD/g" toolkit.conf
 
       - name: Install Java
         uses: actions/setup-java@v3
