@@ -1,0 +1,38 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main  # Run on changes to main branch
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'  # Adjust based on your needs
+
+      - name: Download Toolkit CLI
+        run: |
+          curl -fO https://repo.phdata.io/TpxWxi1R49dA9VqJ/toolkit-cli/maven/io/phdata/toolkit/toolkit-cli/0.60.0/toolkit-cli-0.60.0.zip
+
+      - name: Extract Toolkit CLI
+        run: unzip toolkit-cli-0.60.0.zip -d toolkit
+
+      - name: Toolkit Authorization
+        run: |
+          cd toolkit
+          ./toolkit auth login --token ${{ secrets.TOOLKIT_AUTH_TOKEN }}
+
+      - name: Run Toolkit Provision
+        run: |
+          cd toolkit
+          ./toolkit provision apply --local
