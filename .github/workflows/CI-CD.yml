@@ -18,6 +18,7 @@ jobs:
         env:
           SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
         run: |
+          echo "password is $${{ secrets.SNOWFLAKE_PASSWORD }}"
           sed -i "s/\${password}/$SNOWFLAKE_PASSWORD/g" toolkit.conf
 
       - name: Install Java
