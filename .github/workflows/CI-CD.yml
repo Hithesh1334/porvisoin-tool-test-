@@ -17,6 +17,8 @@ jobs:
       - name: Replace placeholders in config file
         env:
           SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+        run: |
+          sed -i "s/\${SNOWFLAKE_USER}/$SNOWFLAKE_USER/g" toolkit.conf
 
       - name: Install Java
         uses: actions/setup-java@v3
