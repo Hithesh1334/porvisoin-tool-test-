@@ -1,0 +1,5 @@
+entries:
+- name: DE_PROD
+  toUsers: ADE_Hithesh
+- name: SYSADMIN
+  toUsers: ADE_Hithesh

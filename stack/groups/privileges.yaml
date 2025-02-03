@@ -1,0 +1,6 @@
+entries:
+- objectName: MARKETING_PROD
+  objectType: Database
+  privilege_name:
+  - ALL PRIVILEGES
+  roleName: DE_PROD
