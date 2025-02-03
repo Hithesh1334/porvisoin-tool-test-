@@ -31,7 +31,7 @@ jobs:
       - name: Toolkit Authorization
         run: |
           cd toolkit-cli-0.60.0
-          /toolkit auth login --token ${{ secrets.TOOLKIT_AUTH_TOKEN }}
+          toolkit auth login --token ${{ secrets.TOOLKIT_AUTH_TOKEN }}
 
       - name: Run Toolkit Provision
         run: |
