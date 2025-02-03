@@ -36,4 +36,4 @@ jobs:
 
       - name: Run Toolkit Provision
         run: |
-          ./toolkit provision apply --local
+          toolkit provision apply --local
