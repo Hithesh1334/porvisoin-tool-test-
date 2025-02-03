@@ -27,7 +27,6 @@ jobs:
       - name: Extract Toolkit CLI
         run: |
           unzip toolkit-cli-0.60.0.zip 
-          ls -l toolkit-cli  # Verify extracted contents
 
       - name: Toolkit Authorization
         run: |
