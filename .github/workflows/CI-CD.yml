@@ -38,5 +38,5 @@ jobs:
       - name: Run Toolkit Provision
         run: |
           export TOOLKIT_AUTH_TOKEN="${{ secrets.TOOLKIT_AUTH_TOKEN }}"
-          ./toolkit-cli-0.60.0 toolkit auth 
-          ./toolkit-cli-0.60.0 toolkit provision apply --plan
+          toolkit auth 
+          toolkit-cli-0.60.0 toolkit provision apply --plan
