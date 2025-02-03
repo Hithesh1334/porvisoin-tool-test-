@@ -26,13 +26,13 @@ jobs:
 
       - name: Extract Toolkit CLI
         run: |
-          unzip toolkit-cli-0.60.0.zip -d toolkit-cli
+          unzip toolkit-cli-0.60.0.zip 
           ls -l toolkit-cli  # Verify extracted contents
 
       - name: Toolkit Authorization
         run: |
-          cd toolkit-cli
-          ./toolkit-cli-0.60.0 auth login --token ${{ secrets.TOOLKIT_AUTH_TOKEN }}
+          cd toolkit-cli-0.60.0
+          auth login --token ${{ secrets.TOOLKIT_AUTH_TOKEN }}
 
       - name: Run Toolkit Provision
         run: |
