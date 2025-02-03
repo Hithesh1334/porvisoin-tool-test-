@@ -36,4 +36,5 @@ jobs:
 
       - name: Run Toolkit Provision
         run: |
+          cd toolkit-cli-0.60.0
           toolkit provision apply --local
