@@ -28,7 +28,6 @@ jobs:
         run: |
           unzip toolkit-cli-0.60.0.zip -d ./
           mv toolkit-cli-0.60.0/* .
-          ls
 
       - name: Toolkit Authorization
         run: |
@@ -41,3 +40,5 @@ jobs:
           export TOOLKIT_AUTH_TOKEN="${{ secrets.TOOLKIT_AUTH_TOKEN }}"
           ./toolkit auth 
           ./toolkit provision apply --plan
+          ./toolkit provision apply 
+
