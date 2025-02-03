@@ -22,14 +22,17 @@ jobs:
 
       - name: Download Toolkit CLI
         run: |
+          mkdir -p toolkit-cli
           curl -fO https://repo.phdata.io/TpxWxi1R49dA9VqJ/toolkit-cli/maven/io/phdata/toolkit/toolkit-cli/0.60.0/toolkit-cli-0.60.0.zip
 
       - name: Extract Toolkit CLI
-        run: unzip toolkit-cli-0.60.0.zip -d toolkit
+        run: |
+          unzip toolkit-cli/toolkit-cli.zip -d toolkit-cli
+          ls -l toolkit-cli  # Verify extracted contents
 
       - name: Toolkit Authorization
         run: |
-          cd toolkit-cli-0.60.0/
+          cd toolkit-cli
           ./toolkit auth login --token ${{ secrets.TOOLKIT_AUTH_TOKEN }}
 
       - name: Run Toolkit Provision
