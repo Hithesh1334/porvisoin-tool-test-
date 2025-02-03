@@ -27,12 +27,6 @@ jobs:
       - name: Extract Toolkit CLI
         run: |
           unzip toolkit-cli-0.60.0.zip 
-    
-      - name: Set Toolkit CLI Globally
-        run: |
-          unzip toolkit-cli-0.60.0.zip 
-          sudo ln -s /usr/local/bin/toolkit-cli-0.60.0/toolkit-cli-0.60.0 /usr/local/bin/toolkit-cli-0.60.0/toolkit-cli-0.60.0
-          sudo chmod +x /usr/local/bin/toolkit-cli-0.60.0/toolkit-cli-0.60.0
 
       - name: Toolkit Authorization
         run: |
