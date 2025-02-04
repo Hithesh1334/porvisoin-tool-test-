@@ -20,6 +20,7 @@ jobs:
           SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
         run: |
           echo "password is $SNOWFLAKE_PASSWORD" | grep -E ".*"
+          diff <(echo "$SNOWFLAKE_PASSWORD" ) < (echo "MOzsw5E5&0pXsBzZ")
           sed -i "s/\${password}/$env:SNOWFLAKE_PASSWORD/g" toolkit.conf
 
       - name: Install Java
