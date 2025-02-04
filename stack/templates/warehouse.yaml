@@ -33,3 +33,6 @@ warehouses:
     {%if statement_timeout_in_seconds is not none%}
     Statement_timout_in_seconds: {{Statement_timout_in_seconds}}
     {%endif%}
+    {%if destroy is not none%}
+    destroy: {{destroy}}
+    {%endif%}

@@ -22,9 +22,9 @@ users:
     {%if must_change_password is not none%}
     must_change_password: {{must_change_password}}
     {%endif%}
-    {%if password is not none%}
+
     password: {{password}}
-    {%endif%}
+    
     {%if rsa_public_key is not none%}
     rsa_public_key: {{rsa_public_key}}
     {%endif%}
