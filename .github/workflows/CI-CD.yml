@@ -24,6 +24,7 @@ jobs:
             exit 1
           fi
             sed -i "s/\${SNOWFLAKE_PASSWORD}/$SNOWFLAKE_PASSWORD/g" toolkit.conf
+            export SNOWFLAKE_PASSWORD="${{ secrets.SNOWFLAKE_PASSWORD }}"
 
       - name: Install Java
         uses: actions/setup-java@v3
