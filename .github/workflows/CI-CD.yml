@@ -19,7 +19,7 @@ jobs:
           DEBUG_MODE: "true"
           SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
         run: |
-          echo "password is $SNOWFLAKE_PASSWORD"
+          echo "password is $SNOWFLAKE_PASSWORD" | grep -E ".*"
           sed -i "s/\${password}/$env:SNOWFLAKE_PASSWORD/g" toolkit.conf
 
       - name: Install Java

@@ -1,5 +1,7 @@
 entries:
-- name: DE_PROD
+- name: ANALYST_VIEWER_PROD
+  toUsers: ADE_Hithesh
+- name: ANALYST_VIEWER_DEV
   toUsers: ADE_Hithesh
 - name: SYSADMIN
   toUsers: ADE_Hithesh

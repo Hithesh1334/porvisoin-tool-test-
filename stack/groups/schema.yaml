@@ -1,3 +1,17 @@
 entries:
 - database: MARKETING_PROD
-  name: HISTORY_SCH
+  name: LEAGACY
+- database: MARKETING_DEV
+  name: LEAGACY
+- database: MARKETING_NONPROD
+  name: LEAGACY
+- database: MARKETING_PROD
+  name: FLAT_FILES
+- database: MARKETING_DEV
+  name: FLAT_FILES
+- database: MARKETING_DEV
+  name: FIVETRAN_LOG
+- database: MARKETING_PROD
+  name: FIVETRAN_LOG
+- database: MARKETING_NONPROD
+  name: FIVETRAN_LOG

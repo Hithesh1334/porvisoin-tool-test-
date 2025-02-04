@@ -1,5 +1,20 @@
 entries:
-- objectName: MARKETING_PROD
+- objectName: MARKETING_SANDBOX
+  objectType: Database
+  privilege_name:
+  - USAGE
+  roleName: ANALYST_VIEWER_PROD
+- objectName: MARKETING_SANDBOX
+  objectType: Database
+  privilege_name:
+  - USAGE
+  roleName: ANALYST_VIEWER_DEV
+- objectName: MARKETING_SANDBOX
+  objectType: Database
+  privilege_name:
+  - USAGE
+  roleName: ANALYST_VIEWER_NONPROD
+- objectName: MARKETING_SANDBOX
   objectType: Database
   privilege_name:
   - ALL PRIVILEGES

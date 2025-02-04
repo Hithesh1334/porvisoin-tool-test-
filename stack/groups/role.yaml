@@ -1,2 +1,5 @@
 entries:
+- name: ANALYST_VIEWER_PROD
 - name: DE_PROD
+- name: ANALYST_VIEWER_DEV
+- name: ANALYST_VIEWER_NONPROD
