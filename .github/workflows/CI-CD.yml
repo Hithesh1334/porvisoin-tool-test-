@@ -23,7 +23,7 @@ jobs:
             echo "Error: SNOWFLAKE_PASSWORD is not set!"
             exit 1
             fi
-              sed -i "s/\${password}/$SNOWFLAKE_PASSWORD/g" toolkit.conf
+              sed -i "s/\${PASSWORD}/$SNOWFLAKE_PASSWORD/g" toolkit.conf
 
       - name: Install Java
         uses: actions/setup-java@v3
