@@ -19,9 +19,11 @@ jobs:
           DEBUG_MODE: "true"
           SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
         run: |
-          echo "password is $SNOWFLAKE_PASSWORD" | grep -E ".*"
-          diff <(echo "$SNOWFLAKE_PASSWORD" ) <(echo "MOzsw5E5&0pXsBzZ")
-          sed -i "s/\${password}/$env:SNOWFLAKE_PASSWORD/g" toolkit.conf
+          if [ -z "$SNOWFLAKE_PASSWORD" ]; then
+            echo "Error: SNOWFLAKE_PASSWORD is not set!"
+            exit 1
+            fi
+              sed -i "s/\${password}/$SNOWFLAKE_PASSWORD/g" toolkit.conf
 
       - name: Install Java
         uses: actions/setup-java@v3
