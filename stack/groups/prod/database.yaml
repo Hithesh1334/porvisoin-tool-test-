@@ -1,3 +1,5 @@
+templates:
+  path: templates/database.yml
 entries:
 - name: MARKETING_PROD
 - name: MARKETING_DEV

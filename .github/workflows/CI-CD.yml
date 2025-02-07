@@ -13,7 +13,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-
+        with: # Set the secret as an input
+          SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
       - name: Replace placeholders in config file
         env:
           DEBUG_MODE: "true"
